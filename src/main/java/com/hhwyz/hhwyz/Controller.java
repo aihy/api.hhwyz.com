@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
     @GetMapping("money")
-    public String money() {
-        return "10";
+    public String money(Integer allMoney, Integer numOfMonth, Integer moneyPerMonth) {
+        return String.format("平均年化利率：%.2f%%", (float) (allMoney + numOfMonth + moneyPerMonth));
     }
 }

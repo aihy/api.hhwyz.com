@@ -21,17 +21,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.2.0</version>
-		</dependency>
+		<!--		<dependency>-->
+		<!--			<groupId>org.mybatis.spring.boot</groupId>-->
+		<!--			<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--			<version>2.2.0</version>-->
+		<!--		</dependency>-->
 
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+		<!--		<dependency>-->
+		<!--			<groupId>mysql</groupId>-->
+		<!--			<artifactId>mysql-connector-java</artifactId>-->
+		<!--			<scope>runtime</scope>-->
+		<!--		</dependency>-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -56,6 +56,16 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<to>
+						<image>wzhy1234/api.hhwyz.com:latest</image>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
