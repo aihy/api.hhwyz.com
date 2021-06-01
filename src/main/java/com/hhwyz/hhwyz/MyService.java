@@ -34,9 +34,9 @@ public class MyService {
             } else {
                 left = (left + right) / 2;
             }
-            System.out.println(String.format("this time: left=%.8f right=%.8f midY=%.8f", left, right, midY));
+            System.out.printf("this time: left=%.8f right=%.8f midY=%.8f%n", left, right, midY);
         }
-        System.out.println(String.format("%.2f", (left + right) / 2 * 100));
+        System.out.printf("%.2f%n", (left + right) / 2 * 100);
         return (left + right) / 2 * 100;
     }
 
