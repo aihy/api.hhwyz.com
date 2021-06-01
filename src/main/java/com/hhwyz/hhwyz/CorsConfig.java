@@ -19,7 +19,11 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         // 设置你要允许的网站域名，如果全允许则设为 *
-        config.addAllowedOrigin("http://169.254.1.2:4000");
+        config.addAllowedOrigin("http://localhost:4000");
+        config.addAllowedOrigin("http://127.0.0.1:4000");
+//        config.addAllowedOrigin("http://hhwyz.com:80");
+        config.addAllowedOrigin("http://39.105.105.90:80");
+        config.addAllowedOriginPattern("http://*.hhwyz.com:80");
         // 如果要限制 HEADER 或 METHOD 请自行更改
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
